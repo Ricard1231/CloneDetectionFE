@@ -1,0 +1,1 @@
+export const BE_HOST = "http://localhost:8081";

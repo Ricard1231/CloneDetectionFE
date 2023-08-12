@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BE_HOST } from "./constants";
 
 const Choices = ({ pairId, setResetHome, token }) => {
 

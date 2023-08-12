@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BE_HOST } from "./constants";
 
 const Register = ({ setToken }) => {
     const [email, setEmail] = useState('');

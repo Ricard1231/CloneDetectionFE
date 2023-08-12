@@ -2,6 +2,7 @@ import Choices from "./Choices";
 import Snippets from "./Snippets"
 import useFetch from "./useFetch";
 import { useNavigate } from "react-router-dom";
+import { BE_HOST } from "./constants";
 
 const Home = ({ token, setResetHome }) => {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ const Home = ({ token, setResetHome }) => {
     if (!token) {
         navigate('/login', { replace: true});
     }
-    const { data, isPending, error } = useFetch('http://localhost:8081/api/snippets', "GET", null, token);
+    const { data, isPending, error } = useFetch(BE_HOST + '/api/snippets', "GET", null, token);
 
     const handleReload = (e) => {
         setResetHome(new Date());

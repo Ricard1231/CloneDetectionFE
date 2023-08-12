@@ -26,7 +26,7 @@ const Choices = ({ pairId, setResetHome, token }) => {
         setIsPending(true);
         setError(null);
 
-        const url = 'http://localhost:8081/api/snippets';
+        const url = BE_HOST + '/api/snippets';
         
         const request = {
             snippetPairId: pairId,

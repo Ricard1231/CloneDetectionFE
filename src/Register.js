@@ -41,7 +41,7 @@ const Register = ({ setToken }) => {
         setIsPending(true);
         setError(null);
 
-        const url = 'http://localhost:8081/api/user/register';
+        const url = BE_HOST + '/api/user/register';
         
         const request = {
             email,

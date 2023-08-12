@@ -14,7 +14,7 @@ const Login = ({ setToken }) => {
         setIsPending(true);
         setError(null);
 
-        const url = 'http://localhost:8081/api/user/authenticate';
+        const url = BE_HOST + '/api/user/authenticate';
         
         const request = {
             email,

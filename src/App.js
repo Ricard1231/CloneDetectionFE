@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <div className="content">
           <Routes>
-            <Route path='/' element={<Home token={token} key={resetHome} setResetHome={setResetHome} />} />
+            <Route path='/' element={<Home token={token} key={resetHome} setResetHome={setResetHome} setToken={setToken} />} />
             <Route path='/login' element={<Login setToken={setToken} />} />
             <Route path='/register' element={<Register setToken={setToken} />} />
           </Routes>

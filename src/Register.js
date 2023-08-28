@@ -8,6 +8,7 @@ const Register = ({ setToken }) => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [experience, setExperience] = useState(0);
     const [education, setEducation] = useState(null);
+    const [isEngineering, setIsEngineering] = useState(null);
     const [validation, setValidation] = useState({});
     const [isPending, setIsPending] = useState(false);
     const [error, setError] = useState(false);
@@ -34,6 +35,10 @@ const Register = ({ setToken }) => {
             validations.education = true;
         }
 
+        if (isEngineering == null) {
+            validations.isEngineering = true;
+        }
+
         if (Object.keys(validations).length > 0) {
             setValidation(validations);
             return;
@@ -48,7 +53,8 @@ const Register = ({ setToken }) => {
             email,
             password,
             experience,
-            education
+            education,
+            isEngineering
         };
 
         fetch(url, {
@@ -122,9 +128,23 @@ const Register = ({ setToken }) => {
                             <option value="High School">High School</option>
                             <option value="Bachelors">Bachelors</option>
                             <option value="Masters">Masters</option>
+                            <option value="PhD">PhD</option>
                         </select>
                         {validation.education && <div className="text-danger">
                             Please choose education.
+                        </div>}
+                    </div>
+                </div>
+                <div className="row mb-3">
+                    <label htmlFor="isEngineeringSelect" className="col-sm-4 col-form-label">Education Field</label>
+                    <div className="col-sm-8">
+                        <select id="isEngineeringSelect" className="form-select" required value={isEngineering} onChange={(e) => setIsEngineering(e.target.value)}>
+                            <option value={null}>Choose...</option>
+                            <option value={true}>Computer Science/Software Engineering</option>
+                            <option value={false}>Non Computer Science/Software Engineering</option>
+                        </select>
+                        {validation.isEngineering && <div className="text-danger">
+                            Please choose education field.
                         </div>}
                     </div>
                 </div>

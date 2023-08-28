@@ -79,13 +79,13 @@ const Choices = ({ pairId, setResetHome, token }) => {
                         <input type="radio" name="buttonGroup" value="1" id="one" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="one">Type 1: Exact copy, only differences in white space and comments.</label>
                     </div>
                     <div className="choice-item btn btn-outline-secondary">
-                        <input type="radio" name="buttonGroup" value="2" id="two" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="two">Type 2: Same as <i>Type 1</i>, but also variable renaming.</label>
+                        <input type="radio" name="buttonGroup" value="2" id="two" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="two">Type 2: Same as <i>Type 1</i>, but also identifier renaming.</label>
                     </div>
                     <div className="choice-item btn btn-outline-secondary">
-                        <input type="radio" name="buttonGroup" value="3" id="three" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="three">Type 3: Same as <i>Type 2</i>, but also changing or adding few statements.</label>
+                        <input type="radio" name="buttonGroup" value="3" id="three" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="three">Type 3: Same as <i>Type 2</i>, but also changing, adding or deleting a few statements.</label>
                     </div>
                     <div className="choice-item btn btn-outline-secondary">
-                        <input type="radio" name="buttonGroup" value="4" id="four" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="four">Type 4: Semantically identical, but not necessarily same syntax.</label>
+                        <input type="radio" name="buttonGroup" value="4" id="four" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="four">Type 4: Semantically identical, but not the same syntax.</label>
                     </div>
                     <div className="choice-item btn btn-outline-secondary">
                         <input type="radio" name="buttonGroup" value="5" id="five" className="form-check-input" onChange={onRadioChange} /><label className="form-check-label" htmlFor="five">Not a clone</label>
